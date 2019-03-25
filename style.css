@@ -15,17 +15,24 @@
     background-size:cover;
   }
   
-  h1, h2, h3 {
+  h1, h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 2.5em;
     color: rgb(0,0,0);
   }
+
+  h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+  }
   
   a {
     color: #3d6dbe;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.0em;
   }
   
   a:focus,
@@ -172,7 +179,7 @@
     clear: both;
     margin-right: 100%;
     margin-left:  100%;
-    
+    background-color: lightblue;
   }
   
   .row:before,
@@ -186,7 +193,15 @@
   }
     
   /* -------------------Custom Blocks----------------- */
-.grid-2{
+.grid-1{
+  float: right;
+  width:100%;
+  padding: 0 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .grid-2{
   float: left;
   width:100%;
   padding: 0 1%;
@@ -195,12 +210,13 @@
 }
 
 @media screen and (min-width: 50em) {
+  .grid-1 { width: 50%; }
   .grid-2 { width: 50%; }
 
 }
   /* Gallery */
   
-  .gallery [class*="grid-2"], .gallery {
+  .gallery [class*="grid-2"], .gallery [class*="grid-1"] {
     margin-bottom: 1%;
     margin-top: 1%;
     width: 50%;
@@ -217,7 +233,7 @@
   }
   
   @media screen and (min-width: 40em) {
-    .gallery .grid-2 {
+    .gallery .grid-2 .grid-1 {
       width: 50%;
     }
   }
@@ -261,19 +277,45 @@
 
   .h2-menu {
     text-align: center;
-    color: red;
+    color: black;
   }
   
   .bebidas{
-    text-align: right;
+    text-align: center;
   }
 
   .comidas{
     align-self: auto;
-    text-align: left;
+    text-align: center;
   }
 
   .menu {
     text-align: center;
     margin-bottom: 30px;
+  }
+
+  #elaboration {
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    margin-bottom: 4em;
+    text-align: center;
+  }
+
+  .how-beers {
+    max-width: 1200px;
+    width:92%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 310px;
+    height: 850px;
+  }
+
+  @media screen and (min-width: 50em) {
+    #elaboration {
+    }
   }

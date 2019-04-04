@@ -10,3 +10,6 @@ function goToBeer() {
     window.location.replace("ourBeers.html")
 }
 
+function goHome() {
+    window.location.replace("home.html")
+}
